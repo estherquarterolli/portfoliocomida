@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef em Casa</title>
+    <!-- icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style/style.css">
+   <link rel="stylesheet" href="style/header.css">
+   <link rel="stylesheet" href="style/home.css">
+   <link rel="stylesheet" href="style/menu.css">
+   <link rel="stylesheet" href="style/duvidas.css">
+   <link rel="stylesheet" href="style/footer.css">
+   <!-- jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <main>
+        <header>
+           <div class="navbar">
+            <nav id="navbar-header">
+                <i class="fa-solid fa-utensils" id="nav_logo">  Chef em casa</i>
+                <ul id="nav_list">
+                  <il class="nav-item  active"><a href="#home ">Inicio</a></il>
+                  <il class="nav-item"><a href="#menu ">Pacotes</a></il>
+                  <il class="nav-item"><a href="#perguntasfreq">Dúvidas</a></il>
+                </ul>
+                <button   class="btn-default">Contato</button>
+               
+            </nav>
+            <button id="mobile_btn"> <i class="fa-solid fa-bars"></i></button>
+          </div>
+
+            <div id="mobile_menu">
+                <ul id="mobile_nav_list">
+                    <il class="nav-item"><a href="#home ">Inicio</a></il>
+                    <il class="nav-item"><a href="#menu ">Pacotes</a></il>
+                    <il class="nav-item"><a href="#perguntasfreq ">Dúvidas</a></il>
+                 </ul> 
+ <button class="btn-default-mobile">Contato</button>
+            </div>
+        </header>
+
+        <section id="home">
+          <div class="cta">
+
+            <h1 class="tittle">Marmitas perfeitas
+            <span>em casa!</span>
+          </h1>
+<p class="description">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+</p>
+<div class="cta_buttons">
+  <a href="" class="phone_button"> <button class="btn-default">
+    Ver Cardápio
+  </button></a>
+  
+  <a href="tel:+5555" class="phone_button"> <button class="btn-default"><i class="fa-solid fa-phone"></i>
+    (21) 980772320
+  </button></a>
+</div>
+<div class="social-media-buttons">
+  <a href="">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+</div>
+          </div>
+
+          <div class="banner">
+
+            <img src="images/marmita-banner.png" alt="">
+          </div>
+        </section>
+    
+    <section id="menu">
+      <h2 class="section-title">Pacotes</h2>
+      <h3 class="section-subtitle">melhores combos pra você</h3>
+
+      <div id="dishes">
+          <div class="dish">
+              <div class="dish-heart">
+                  <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <img src="images/img1.jpg" class="dish-image" alt="">
+
+              <h3 class="dish-title">
+                  1 semana
+              </h3>
+
+              <span class="dish-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </span>
+
+              <div class="dish-rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(500+)</span>
+              </div>
+
+              <div class="dish-price">
+                  <h4>R$100,00</h4>
+                  <button class="btn-default">Pedir
+                  </button>
+              </div>
+          </div>
+
+          <div class="dish">
+              <div class="dish-heart">
+                  <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <img src="images/img2.avif" class="dish-image" alt="">
+
+              <h3 class="dish-title">
+                 2 semanas
+              </h3>
+
+              <span class="dish-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </span>
+
+              <div class="dish-rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(500+)</span>
+              </div>
+
+              <div class="dish-price">
+                  <h4>R$170,00</h4>
+                  <button class="btn-default">Pedir
+                  </button>
+              </div>
+          </div>
+
+          <div class="dish">
+              <div class="dish-heart">
+                  <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <img src="images/img3.webp" class="dish-image" alt="">
+
+              <h3 class="dish-title">
+                 1 mês
+              </h3>
+
+              <span class="dish-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </span>
+
+              <div class="dish-rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(500+)</span>
+              </div>
+
+              <div class="dish-price">
+                  <h4>R$350,00</h4>
+                  <button class="btn-default">Pedir
+                  </button>
+              </div>
+          </div>
+
+
+      </div>
+  </section>
+ 
+  <section id="perguntasfreq"class="perguntasfreq">
+    <h2 class="section-title">Dúvidas</h2>
+    <h3 class="section-subtitle">se tiver outra dúvida, entre em contato!</h3>
+  
+    <div id="container-accordion">
+        <div class="accordion">
+            <button class="accordion-header">
+                <span>
+                    Posso escolher o sabor de cada marmita??
+                </span>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+    
+            <div class="accordion-body">
+                <p class="texto-accordion" style="color: black;">
+                    Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Rem corrupti voluptatem
+                    enim facilis maxime, et iure magnam suscipit
+                    consequatur nemo provident dolores temporibus
+                    praesentium nisi quae unde nostrum
+                    commodi sit.
+                </p>
+            </div>
+        </div>
+    
+        <div class="accordion">
+            <button class="accordion-header">
+                <span>
+                    Ela já vem congelada?
+                </span>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+    
+            <div class="accordion-body">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Rem corrupti voluptatem
+                    enim facilis maxime, et iure magnam suscipit
+                    consequatur nemo provident dolores temporibus
+                    praesentium nisi quae unde nostrum
+                    commodi sit.
+                </p>
+            </div>
+        </div>
+    
+        <div class="accordion">
+            <button class="accordion-header">
+                <span>
+                   Como devo armazenar?
+                </span>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+    
+            <div class="accordion-body">
+                <p cla>
+                    Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Rem corrupti voluptatem
+                    enim facilis maxime, et iure magnam suscipit
+                    consequatur nemo provident dolores temporibus
+                    praesentium nisi quae unde nostrum
+                    commodi sit.
+                </p>
+            </div>
+        </div>
+    
+    
+    </div>
+    </section>
+    
+    <footer>
+      <div class="TITTLE-FOOTER">
+      <i class="fa-solid fa-utensils" id="nav_logo">  Chef em casa</i>
+  
+
+          <div class="social-media-buttons">
+              <a href="">
+                  <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+              <a href="">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="">
+                  <i class="fa-brands fa-facebook"></i>
+              </a>
+          </div>
+      </div>
+     
+  </footer>
+</main>
+<script src="js/mobilemenu.js"></script>
+<script src="js/duvidas.js"></script>
+<script src="js/animacaopag.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>
