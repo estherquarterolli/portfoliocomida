@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    //MENU MOBILE
+    // --- MENU MOBILE ---
     const mobileBtn = document.getElementById('mobile_btn');
     const mobileMenu = document.getElementById('mobile_menu');
     const mobileLinks = mobileMenu.querySelectorAll('a');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', toggleMenu); // Fecha o menu ao clicar em um link
     });
 
-    //HEADER COM SCROLL 
+    // --- HEADER COM SCROLL ---
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //ACCORDION (DÚVIDAS)
+    // --- ACCORDION (DÚVIDAS) ---
     const accordions = document.querySelectorAll('.accordion');
     accordions.forEach(accordion => {
         const header = accordion.querySelector('.accordion-header');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    //ANIMAÇÃO DE ELEMENTOS AO ROLAR A PÁGINA
+    // --- ANIMAÇÃO DE ELEMENTOS AO ROLAR A PÁGINA ---
     const animatedElements = document.querySelectorAll('.animated-element');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(element => observer.observe(element));
 
 
-    //MARCAR LINK ATIVO NA NAVEGAÇÃO COM SCROLL 
+    // --- MARCAR LINK ATIVO NA NAVEGAÇÃO COM SCROLL ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#nav_list .nav-item');
     
