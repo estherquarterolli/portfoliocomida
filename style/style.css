@@ -445,7 +445,55 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-    /* Menu Mobile */
+    section { padding: 80px 5%; }
+    
+
+    /* 1. Botões da seção Home */
+    .cta_buttons {
+        flex-direction: column; /* Botões um embaixo do outro */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cta_buttons .btn-default,
+    .cta_buttons .btn-secondary {
+        width: 100%; 
+        max-width: 380px; 
+        justify-content: center; 
+        font-size: 1.1rem; 
+        padding: 16px 20px; 
+    }
+
+    .cta_buttons .btn-default i,
+    .cta_buttons .btn-secondary i {
+        font-size: 1.2rem; 
+    }
+
+    /* 2. Cards de Pacotes (Preço e Botão) */
+    .dish-price {
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center; 
+        margin-top: 15px;
+    }
+
+    .dish-price h4 {
+        font-size: 2rem; 
+        line-height: 1;
+    }
+    
+    .dish-price .btn-default {
+        width: 100%; 
+        font-size: 1.15rem; 
+        padding: 15px 10px; 
+        gap: 12px; 
+    }
+
+    .dish-price .btn-default i {
+        font-size: 1.1rem; 
+    }
+    
+    /* Menu Mobile*/
     #nav_list, .btn-contact { display: none; }
     #mobile_btn { display: block; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--primary-color); }
     
@@ -477,7 +525,5 @@ section {
         text-decoration: none;
     }
     
-    /* Outros Ajustes */
     .title { font-size: 3.5rem; }
-    section { padding: 80px 5%; }
 }
