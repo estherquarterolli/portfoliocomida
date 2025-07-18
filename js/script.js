@@ -1,20 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- MENU MOBILE ---
     const mobileBtn = document.getElementById('mobile_btn');
     const mobileMenu = document.getElementById('mobile_menu');
     const mobileLinks = mobileMenu.querySelectorAll('a');
 
+    // Função para ABRIR e FECHAR o menu (usada pelo botão)
     const toggleMenu = () => {
         mobileMenu.classList.toggle('active');
     };
 
+    // Função dedicada para APENAS FECHAR o menu (usada pelos links)
+    const closeMenu = () => {
+        mobileMenu.classList.remove('active');
+    }
+
+    // O botão principal alterna (abre/fecha)
     mobileBtn.addEventListener('click', toggleMenu);
+
+    // Os links dentro do menu agora apenas fecham
     mobileLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu); // Fecha o menu ao clicar em um link
+        link.addEventListener('click', closeMenu);
     });
 
-    // --- HEADER COM SCROLL ---
+    document.addEventListener('click', (event) => {
+        // Verifica se o menu está ativo
+        if (!mobileMenu.classList.contains('active')) {
+            return;
+        }
+
+        // Verifica se o clique foi dentro do menu ou no botão que o abre
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnButton = mobileBtn.contains(event.target);
+
+        // Se o clique foi fora de ambos, fecha o menu
+        if (!isClickInsideMenu && !isClickOnButton) {
+            closeMenu();
+        }
+    });
+
+
+    // HEADER COM SCROLL
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -24,23 +49,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- ACCORDION (DÚVIDAS) ---
+    // ACCORDION (DÚVIDAS)
     const accordions = document.querySelectorAll('.accordion');
     accordions.forEach(accordion => {
         const header = accordion.querySelector('.accordion-header');
         header.addEventListener('click', () => {
-            // Fecha outros accordions abertos
             accordions.forEach(otherAccordion => {
                 if (otherAccordion !== accordion && otherAccordion.classList.contains('active')) {
                     otherAccordion.classList.remove('active');
                 }
             });
-            // Abre ou fecha o accordion clicado
             accordion.classList.toggle('active');
         });
     });
 
-    // --- ANIMAÇÃO DE ELEMENTOS AO ROLAR A PÁGINA ---
+    // ANIMAÇÃO DE ELEMENTOS AO ROLAR A PÁGINA
     const animatedElements = document.querySelectorAll('.animated-element');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -49,12 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.15 // O elemento anima quando 15% dele estiver visível
+        threshold: 0.15
     });
     animatedElements.forEach(element => observer.observe(element));
 
-
-    // --- MARCAR LINK ATIVO NA NAVEGAÇÃO COM SCROLL ---
+    // MARCAR LINK ATIVO NA NAVEGAÇÃO COM SCROLL
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#nav_list .nav-item');
     
@@ -63,14 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (window.scrollY >= sectionTop - 150) { // 150 é um offset
+            if (window.scrollY >= sectionTop - 150) {
                 currentSectionId = section.getAttribute('id');
             }
         });
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            // O link 'a' está dentro do 'li' que é o .nav-item
             if (link.querySelector('a').getAttribute('href') === `#${currentSectionId}`) {
                 link.classList.add('active');
             }
